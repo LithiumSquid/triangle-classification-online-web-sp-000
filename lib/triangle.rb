@@ -25,6 +25,7 @@ def validate
         raise TriangleError
         rescue TriangleError => error
         puts TriangleError.message
+      end
       elsif @side1 + @side2 <= @side3 && @side1 + @side3 <= @side2 && @side2 + @side3 <= @side1
         begin
         raise TriangleError
