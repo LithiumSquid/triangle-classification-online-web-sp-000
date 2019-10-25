@@ -31,6 +31,7 @@ def validate
         raise TriangleError
         rescue TriangleError => error
         puts TriangleError.message
+      end
     end
   end
   
