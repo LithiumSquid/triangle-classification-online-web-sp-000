@@ -12,13 +12,12 @@ class Triangle
     validate
     if @side1 == @side2 && @side2 == @side3
       return :equilateral
-    else if @side1 != @side2 && @side1 != @side3 && @side2 != @side3
+    elsif @side1 != @side2 && @side1 != @side3 && @side2 != @side3
       return :scalene
     else
       return :isosceles
     end
   end
-end
 
 def validate
   if @side1 <= 0 || @side2 <= 0 || @side3 <= 0
@@ -26,13 +25,13 @@ def validate
         raise TriangleError
         rescue TriangleError => error
         puts TriangleError.message
-      end
-      else if @side1 + @side2 <= @side3 && @side1 + @side3 <= @side2 && @side2 + @side3 <= @side1
+      elsif @side1 + @side2 <= @side3 && @side1 + @side3 <= @side2 && @side2 + @side3 <= @side1
         begin
         raise TriangleError
         rescue TriangleError => error
         puts TriangleError.message
     end
+  end
   
   class TriangleError < StandardError
     def message
