@@ -18,6 +18,7 @@ class Triangle
       return :isosceles
     end
   end
+end
 
 def validate
   if @side1 <= 0 || @side2 <= 0 || @side3 <= 0
